@@ -44,7 +44,7 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:790px;
   margin:0 auto;
 }
 
@@ -94,7 +94,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:240px;
   float:left;
   position:fixed;
 }
@@ -175,7 +175,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:240px;
   float:left;
   position:fixed;
   bottom:50px;
