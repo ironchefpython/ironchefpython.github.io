@@ -1,7 +1,14 @@
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+        <a class="indent1x" href={{ post.url }}">
+        <span class="f">post</span><span class="p">(</span><span 
+            class="f">date</span><span class="p">(</span><span 
+            class="dd">{{ post.date | date: "%Y" }}</span><span class="p">,</span><span 
+            class="dd">{{ post.date | date: "%m" }}</span><span class="p">,</span><span
+            class="dd">{{ post.date | date: "%d" }}</span><span class="p">),</span> <span
+            class="f">title</span><span class="p">=</span><span 
+            class="ls">"{{ post.title }}"</span><span class="p"><span 
+            class="p">,</span> <span class="block"><span
+            class="f">summary</span><span class="p">=</span><span 
+            class="s">"{{ post.excerpt }}"</span></span>)</a><br>
+        <br>
+{% endfor %}
