@@ -1,19 +1,13 @@
----
-published: "true"
-layout: home
-title: ironchefpython
-
----
-
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Ironchefpython.github.io by ironchefpython</title>
+    <title>ironchefpython</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,26 +16,72 @@ title: ironchefpython
   <body>
     <div class="wrapper">
       <header>
+        <span>&gt;&gt;&gt; import this</span>
         <h1>ironchefpython</h1>
-        <p>My business is solving problems with technology, and business is good.</p>
-
-
-        <p class="view"><a href="https://github.com/ironchefpython">View My GitHub Profile</a></p>
-
+        <p class="view"><a href="https://github.com/ironchefpython">GitHub Profile</a></p>
       </header>
-      <section>
-        <h2>About Myself</h2>
-        <p>I've been working with technology for 3/4 of my life, since my very 
-        first <a href="http://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A">TI99/4A</a>,
-        and everything about computing has changed except for my hunger to learn
-        it all. I currently sling Visio and Powerpoint as Technology Architect 
-        for an American bank. Having been put out to stud, I recall my
-        development days with rose-colored glasses, and savor every chance I get
-        I bang out a few thousand lines of code to solve an interesting problem.</p>
-        <h2>Posts</h2>
-          {% include posts.html %}
-          <h2>A few of my Favorite Things</h2>
-          {% include favorites.html %}
+
+      <section class="mockcode">
+        <span class="kn">from</span>
+        <span class="nn">biography</span>
+        <span class="kn">import</span>
+        <span class="nt">excerpt</span><br>
+        <br>
+        <span class="k">def</span>
+        <span class="fd">main</span><span class="p">():</span><br>
+        <span class="sd indent1">"""I've been working with technology for 3/4 of my life, since my very 
+            first <a href="http://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A">TI99/4A</a>,
+            and everything about computing has changed except for my hunger to learn
+            it all. I currently sling Visio and Powerpoint as Technology Architect 
+            for a big American bank. Having been put out to stud, I recall my
+            development days with rose-colored glasses, and savor every chance I get
+            I bang out a couple dozen or a few thousand lines of code to solve an 
+            interesting problem."""</span><br>
+        <br>
+        <span class="c1">## BLOG POSTS ##</span><br>
+{% for post in site.posts %}
+        <a class="indent1x" href={{ post.url }}">
+        <span class="f">post</span><span class="p">(</span><span 
+            class="f">date</span><span class="p">(</span><span 
+            class="dd">{{ post.date | date: "%Y" }}</span><span class="p">,</span><span 
+            class="dd">{{ post.date | date: "%m" }}</span><span class="p">,</span><span
+            class="dd">{{ post.date | date: "%d" }}</span><span class="p">),</span> <span
+            class="f">title</span><span class="p">=</span><span 
+            class="ls">"{{ post.title }}"</span><span class="p"><span 
+            class="p">,</span> <span class="block"><span
+            class="f">summary</span><span class="p">=</span><span 
+            class="s">"{{ post.excerpt }}"</span></span>)</a><br>
+        <br>
+{% endfor %}
+
+
+
+
+        <span class="c1">## RESOURCES ##</span><br>
+        <span class="kn">from</span>
+        <a class="nn" href="https://c9.io">python</a>
+        <span class="kn">import</span>
+        <span class="n">inspiration</span><br>
+        <span class="sd indent1">"""The <a href="https://c9.io">Python Programming
+            Language</a> was my first true development love, I didn't so much
+            "learn" Python as recognize it as a means of personal 
+            expression."""</span><br>
+        <br>
+        <span class="kn">from</span>
+        <a href="https://c9.io" class="nn">Cloud9</a>
+        <span class="kn">import</span>
+        <span class="n">ide</span><br>
+        <span class="sd indent1">"""<a href="https://c9.io">Cloud9 IDE</a> lets
+            you collaboratively edit and debug code in your web browser; syntax 
+            highlighting, code completion, unix shell, and more."""</span><br>
+        <br>
+        <span class="kn">from</span>
+        <span class="n">Y Combinator</span>
+        <span class="kn">import</span>
+        <a class="nn" href="https://news.ycombinator.com/">news</a><br>
+        <span class="sd indent1">"""<a href="https://news.ycombinator.com/">Hacker 
+            News</a> is my favorite technology and startup echo chamber."""</span><br>
+        <br>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
