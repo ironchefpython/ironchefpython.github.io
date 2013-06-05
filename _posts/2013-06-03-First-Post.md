@@ -1,6 +1,6 @@
 ---
 published: "true"
-layout: post
+layout: home
 title: Welcome
 excerpt: First iteration
 ---

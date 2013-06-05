@@ -16,16 +16,14 @@
   <body>
     <div class="wrapper">
       <header>
-        <span>&gt;&gt;&gt; import this</span>
-        <h1>ironchefpython</h1>
-        <p class="view"><a href="https://github.com/ironchefpython">GitHub Profile</a></p>
+         {% include header.html %}
       </header>
 
       <section>
         {{ content }}
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+         {% include footer.html %}
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
